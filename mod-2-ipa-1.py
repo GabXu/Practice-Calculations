@@ -34,7 +34,7 @@ def savings(gross_pay, tax_rate, expenses):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
 def savings(gross_pay, tax_rate, expenses):
-    return gross_pay * tax_rate - expenses
+    return (int(gross_pay*(1-float(tax_rate)))-int(expenses))
 
     savings(100000, 0.13, 1000)
 
@@ -105,9 +105,11 @@ def interest(principal, rate, periods):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
 def interest(principal, rate, periods):
-    return rate * periods + principal
+    principal = int(principal)
+    rate = float(rate)
+    periods = int(periods)
+    int((principal*(rate*periods))+principal)
 
-    interest(10000, 0.03, 1000)
 
 def body_mass_index(weight, height):
     '''Body Mass Index.
@@ -140,6 +142,7 @@ def body_mass_index(weight, height):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
 def body_mass_index(weight, height):
-    return (weight / 2.2) / ((height[0]*0.3048)+(height[1]*0.0254))
-
-    body_mass_index(100,5)
+    kilograms = float(weight)/2.2046
+    feet,inches = height.split("'")
+    m = (int(feet)/3.281) + int(inches.strip('"'))/39.37
+    return float(kilograms/(m ** 2))
