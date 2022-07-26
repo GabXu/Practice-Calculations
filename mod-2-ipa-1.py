@@ -34,7 +34,7 @@ def savings(gross_pay, tax_rate, expenses):
     # Replace `pass` with your code. 
     # Stay within the function. Only use the parameters as input. The function should return your answer.
 def savings(gross_pay, tax_rate, expenses):
-    return (int(gross_pay*(1-float(tax_rate)))-int(expenses))
+    return ((gross_pay - (gross_pay * tax_rate)) - expenses)
 
     savings(100000, 0.13, 1000)
 
