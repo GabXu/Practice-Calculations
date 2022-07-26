@@ -108,7 +108,7 @@ def interest(principal, rate, periods):
     principal = int(principal)
     rate = float(rate)
     periods = int(periods)
-    int((principal*(rate*periods))+principal)
+    return int((principal*(rate*periods))+principal)
 
 
 def body_mass_index(weight, height):
